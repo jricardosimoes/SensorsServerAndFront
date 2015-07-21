@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p #{descr}
+
+ 
+  #results 
+        each result in results
+            .row
+                .col-md-4
+                    img.media-object(src='/images/' + result.img, alt=result.type)
+                .col-md-8
+                    h4.media-heading
+                        a(href='/sensor/'+result.id) #{result.id} #{result.name}
+                    span.label.label-primary #{result.type}
+                    p #{result.descr}
+                    a(href='/sensor/'+result.id) 
+                        span.glyphicon.glyphicon-option-horizontal

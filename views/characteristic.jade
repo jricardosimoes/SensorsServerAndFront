@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1= title
+  p #{descr}
+
+  #results 
+    .row
+            .col-md-4
+                img.media-object(src='/images/' + info.img, alt=info.type)
+            .col-md-8
+                h4.media-heading #{info.id} #{info.name}
+                span.label.label-primary #{info.type}
+                p #{info.descr}
+                ul.list-group
+                  each result in characteristics
+                    li.list-group-item
+                        .row
+                            .col-md-4
+                                a(href='/characteristic/'+result.id) 
+                                    img.media-object(src='/images/' + result.characteristic_img, width=100, alt=result.characteristic)
+                            .col-md-8  
+                                    ul.list-group
+                                        li.list-group-item  
+                                            span.text-right
+                                                span.glyphicon.glyphicon-tag(aria-hidden='true')
+                                                a(href='/characteristic/'+result.id)   ID   #{result.id}
+                                        li.list-group-item  
+                                            span Característica: 
+                                            span #{result.characteristic}
+                                        li.list-group-item  
+                                            span Sensor:  
+                                            span #{result.sensor} #{result.sensor_name}
+                                        li.list-group-item
+                                            span Tipo do Sensor: 
+                                            span #{result.sensor_type}
+                                        li.list-group-item
+                                            span Unidade de medida: 
+                                            span #{result.unity_sigla}
+
+

@@ -1,0 +1,48 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='icon', href='/images/favicon.ico')
+    link(rel='apple-touch-icon', sizes='57x57', href='/images/apple-icon-57x57.png')
+    link(rel='icon', type='image/png', sizes='36x36', href='/images/android-icon-36x36.png')
+    link(rel='icon', type='image/png', sizes='36x36', href='/images/android-icon-192x192.png')
+    
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/modules/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/modules/bootstrap/dist/css/bootstrap-theme.min.css')
+    script(src='/modules/jquery/dist/jquery.min.js')
+    script(src='/modules/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/modules/angular/angular.min.js')
+    script(src='/javascripts/Chart.min.js')
+    
+    script(src='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js')
+    link(href='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css')
+
+
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Sensores
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='/') Início
+            li
+              a(href='/characteristic/all') Todos sensores
+            li
+              a(href='/contact') Contato
+              
+            li
+              a(href='/about') Sobre
+        // /.nav-collapse
+    .container
+        block content
+    // /.container

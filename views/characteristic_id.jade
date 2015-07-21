@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    h1= title
+
+    .row
+        .col-md-12
+            canvas#plot(width='580', height='200') 
+    
+    .row
+        .col-md-12
+            .panel.panel-default
+                .panel-heading
+                    h3.panel-title #{info.characteristic} (#{info.unity_sigla})
+                .panel-body
+                    ul.list-group
+                        li.list-group-item  
+                            span Sensor: 
+                            a(href='/sensor/' + info.sensor) #{info.sensor_name}
+                        li.list-group-item
+                            span Tipo do Sensor: 
+                            a(href='/sensor/type/' + info.sensor_type_id) #{info.sensor_type}
+                        li.list-group-item Característica do sensor: #{info.characteristic}
+                        li.list-group-item 
+                            span Unidade de medida: 
+                            a(href='/unity/' + info.unity_id) #{info.unity_sigla}
+
+    .row
+        .col-md-12
+            .ct-chart.ct-golden-section(width='580', height='200')
+        
+    script(type='text/javascript').
+        var data = !{JSON.stringify(data)}
+        var info = !{JSON.stringify(info)}
+        ctx = document.getElementById("plot").getContext("2d");
+        var mySensorChart = new Chart(ctx).Line(data, {bezierCurve: true, responsive: true});
+        
+        
+        new Chartist.Line('.ct-chart', {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+          series: [
+            [2, 3, 2, 4, 5],
+            [0, 2.5, 3, 2, 3],
+            [1, 2, 2.5, 3.5, 4]
+          ]
+        }, {
+          width: 320,
+          height: 240
+        });
+
+    
+
+

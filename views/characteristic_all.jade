@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p #{descr}
+
+  script(src='javascripts/lib/angular/angular.min.js')
+  
+  #results 
+    ul
+      each result in results
+        li
+          a(href='/characteristic/'+result.id) #{result.characteristic} #{result.sensor} #{result.sensor_name} #{result.sensor_type} #{result.unity_sigla}

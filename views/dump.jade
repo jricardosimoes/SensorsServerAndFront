@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p #{descr}
+
+  #results 
+    
+        each result in results
+            .row
+                .col-md-2
+                    a(href='/characteristic/'+result.id)
+                        img.media-object(src='/images/' + result.characteristic_img, width=100, alt=result.type)
+                .col-md-8
+                    a(href='/characteristic/'+result.id) 
+                        span.text-right
+                            span.glyphicon.glyphicon-tag(aria-hidden='true')
+                            a(href='/characteristic/'+result.id)   ID   #{result.id}
+
+                    ul.list-group
+                        li.list-group-item   
+                            span Característica: 
+                            span #{result.characteristic}
+                        li.list-group-item   
+                            span Sensor: 
+                            span #{result.sensor} #{result.sensor_name}
+                        li.list-group-item 
+                            span Tipo do Sensor: 
+                            span #{result.sensor_type}
+                        li.list-group-item 
+                            span Unidade de medida: 
+                            span #{result.unity_sigla}
