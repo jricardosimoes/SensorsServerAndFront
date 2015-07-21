@@ -12,7 +12,7 @@ npm install
 
 Change the line with the variable apiKey  in the file server.js.
 ```bash
-var apiKey = "32gss64XZab";
+var apiKey = "YouRKeyHere";
 ```
 
 If you wish to change the port where the server listens (3000 by default) edit the last line of server.js.
@@ -20,11 +20,11 @@ If you wish to change the port where the server listens (3000 by default) edit t
 app.listen(3000);
 ```
 
-A mysql database must be created with the schemas found in the file SQL/Structure.sql.
+A mysql database must be created with the schemas found in the file /SQL/Structure.sql.
 
-Demos from data are in the file SQL/DemoData.sql.
+Demos from data are in the file /SQL/DemoData.sql.
 
-The mysql dabase configuration is at \node_modules\connection\index.js
+The mysql dabase configuration is at /node_modules/connection/index.js
 
 This config is used by both server and frontend.
 
