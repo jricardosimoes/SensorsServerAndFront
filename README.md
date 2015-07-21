@@ -1,5 +1,5 @@
 # SensorsServerAndFront
-Server and Frontend for Aduino sensors written form node.js
+Server and Frontend for Aduino sensors app written in node.js
 
 https://github.com/jricardosimoes/ArduinoSensorsWebClient
 
