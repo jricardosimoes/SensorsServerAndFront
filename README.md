@@ -62,4 +62,18 @@ Point you browser to http://server:8080/
 
 
 
+*Frontend
+![Frontend](https://github.com/jricardosimoes/SensorsServerAndFront/blob/master/Screenshots/Screenshot_2015-07-21-15-18-03.png)
+
+* Humidity Graph
+![Humidity Graph](https://github.com/jricardosimoes/SensorsServerAndFront/blob/master/Screenshots/Screenshot_2015-07-21-15-23-34.png)
+
+* Temperature Graph
+![Temperature Graph](https://github.com/jricardosimoes/SensorsServerAndFront/blob/master/Screenshots/Screenshot_2015-07-21-15-22-45.png)
+
+* Pressure Graph
+![Pressure Graph](https://github.com/jricardosimoes/SensorsServerAndFront/blob/master/Screenshots/Screenshot_2015-07-21-15-23-08.png)
+
+
+
 
