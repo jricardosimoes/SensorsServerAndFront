@@ -6,7 +6,7 @@ var moment = require('moment');
 var db = require('connection');
 var connection = db();
 
-var apiKey = "32gss64XZab";
+var apiKey = "YouRKeyHere";
 var app = express();
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
